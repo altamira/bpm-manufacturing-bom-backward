@@ -5,8 +5,12 @@ Instructions to compile this project:
 
 ### This steps setup a web app
 
+1. Download and install [Node JS](http://nodejs.org/)
+
+2. Clone this repository at your git home
+
 ```sh
-$ cd yo
+$ cd GIT_HOME/bpm-manufacturing-bom/yo
 $ npm install -g yo
 $ npm install -g generator-angular
 $ bower install
@@ -37,6 +41,8 @@ mvn clean install -Parq-jbossas-remote
 ```
 
 The Jboss AS need to be running in this case.
+
+To check if JBoss is running you can access the [admistrative console](http://localhost:9990) of JBoss AS 7 and manually install war package if you want. At first time, it request that you create an administrative user, follow the instructions to do that.
 
 PS: Server setup required a folder /yo/dist, so setup web app before.
 
