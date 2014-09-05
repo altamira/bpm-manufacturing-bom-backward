@@ -19,6 +19,7 @@ $ cd bower_components/overthrow
 $ npm install
 $ grunt
 $ cd ../..
+$ npm install
 $ grunt build
 $ grunt serve
 ```
@@ -27,12 +28,12 @@ Webapp uses [Mobile Angular UI](http://mobileangularui.com/docs/) as a responsiv
 
 ### To setup a server
 
-Download and expand the [JBoss AS 7 Application Server](http://camunda.org/release/camunda-bpm/jboss/7.1/camunda-bpm-jboss-7.1.0-Final.zip) at any folder you want.
+Download and extract the [JBoss AS 7 Application Server](http://camunda.org/release/camunda-bpm/jboss/7.1/camunda-bpm-jboss-7.1.0-Final.zip) at any folder you want. This is the JBOSS_HOME folder.
 
 To start the server:
 
 ```sh
-$ cd JBOSS_HOME/camunda-bpm-jboss-7.1.0-Final
+$ cd JBOSS_HOME
 $ start-camunda.sh
 ```
 
@@ -49,6 +50,21 @@ To compile and run the unit tests:
 $ cd GIT_HOME/bpm-manufacturing-bom
 mvn clean install -Parq-jbossas-remote
 ```
+
+To deply manually the generated war file:
+
+```sh
+$ cd GIT_HOME/bpm-manufacturing-bom/target
+$ cp bpm-manufacturing-bom-0.0.1-SNAPSHOT JBOSS_HOME/jboss-as-7.2.0.Final/standalone/deployments
+```
+
+To work with JBoss AS on Eclipse:
+
+* Go to Eclipse Marketplace (Eclipse -> Help -> Eclipse Marketplace...)
+* Find for "jboss"
+* Install "Red Hat JBoss Developer Studio". Choose the same distribution version of your Eclipse (Juno, Kepler, ...)
+* After Eclipse reboots, go to Servers View -> New Server, choose JBoss AS 7.1 and create a new Runtime Environment point to JBOSS_HOME folder
+
 
 The JBoss AS need to be running before in this case.
 
