@@ -52,7 +52,8 @@ mvn clean install -Parq-jbossas-remote
 
 The JBoss AS need to be running before in this case.
 
-To check if JBoss is running you can access the [admistrative console](http://localhost:9990) of JBoss AS 7 and manually install war package if you want. At first time, it request that you create an administrative user, follow the instructions to do that.
+To check if JBoss is running you can access the [administrative console](http://localhost:9990) of JBoss AS 7 and manually install war package if you want. At first time, it request that you create an administrative user, follow the instructions to do that.
 
-PS: Server setup required a folder /yo/dist, so setup web app before.
+PS: Server setup required a folder /yo/dist created on build of Webapp, this means that setup Webapp are required first.
 
+See project [Wiki](http://www.github.com/altamira/bpm-manufacturing-bom/wiki) for implementation specifications.
