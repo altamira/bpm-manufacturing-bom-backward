@@ -15,6 +15,10 @@ $ npm install -g yo
 $ npm install -g generator-angular
 $ npm install grunt-connect-proxy --save-dev
 $ bower install
+$ cd bower_components/overthrow
+$ npm install
+$ grunt
+$ cd ../..
 $ grunt build
 $ grunt serve
 ```
