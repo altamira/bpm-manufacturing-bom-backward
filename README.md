@@ -13,10 +13,13 @@ Instructions to compile this project:
 $ cd GIT_HOME/bpm-manufacturing-bom/yo
 $ npm install -g yo
 $ npm install -g generator-angular
+$ npm install grunt-connect-proxy --save-dev
 $ bower install
 $ grunt build
 $ grunt serve
 ```
+
+Webapp uses [Mobile Angular UI](http://mobileangularui.com/docs/) as a responsive framework what requires setup too.
 
 ### To setup a server
 
