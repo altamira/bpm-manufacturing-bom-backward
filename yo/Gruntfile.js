@@ -73,7 +73,7 @@ module.exports = function (grunt) {
       // Proxy requests starting with /webresources to the server on port 8080
       proxies: [
         {
-          context: '/bpm/purchase/request/rest',
+          context: '/bpm/manufacturing/bom/rest',
           host: 'localhost',
           port: 8080,
           https: false,
@@ -121,7 +121,18 @@ module.exports = function (grunt) {
       dist: {
         options: {
           open: true,
-          base: '<%= yeoman.dist %>'
+          base: '<%= yeoman.dist %>',
+          middleware: function (connect) {
+            return [
+              proxySnippet,
+              connect.static('.tmp'),
+              connect().use(
+                '/bower_components',
+                connect.static('./bower_components')
+              ),
+              connect.static(appConfig.app)
+            ];
+          }
         }
       }
     },
@@ -377,7 +388,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
     if (target === 'dist') {
-      return grunt.task.run(['build', 'connect:dist:keepalive']);
+      return grunt.task.run(['build', 'configureProxies', 'connect:dist:keepalive']);
     }
 
     grunt.task.run([
@@ -385,6 +396,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
+      'configureProxies', // add this line
       'connect:livereload',
       'watch'
     ]);
