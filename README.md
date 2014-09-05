@@ -63,7 +63,7 @@ To work with JBoss AS on Eclipse:
 * Go to Eclipse Marketplace (Eclipse -> Help -> Eclipse Marketplace...)
 * Find for "jboss"
 * Install "Red Hat JBoss Developer Studio". Choose the same distribution version of your Eclipse (Juno, Kepler, ...)
-* After Eclipse reboots, go to Servers View -> New Server, choose JBoss AS 7.1 and create a new Runtime Environment point to JBOSS_HOME folder
+* After Eclipse reboots, go to Servers View -> New Server, choose JBoss AS 7.1 and follow the steps to create a new Runtime Environment pointing to JBOSS_HOME folder
 
 
 The JBoss AS need to be running before in this case.
