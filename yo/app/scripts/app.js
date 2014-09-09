@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('yoApp', [
+var yoApp = angular.module('yoApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -18,8 +17,8 @@ angular
     'ngTouch',
     'mobile-angular-ui',
     'restangular'
-  ])
-  .config(function ($routeProvider) {
+  ]);
+yoApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -28,6 +27,14 @@ angular
       .when('/about', {
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
+      })
+	  .when('/orders', {
+        templateUrl: 'views/orders.html',
+        controller: 'OrderListCtrl'
+      })
+	   .when('/products', {
+        templateUrl: 'views/products.html',
+        controller: 'ProductListCtrl'
       })
       .otherwise({
         redirectTo: '/'
