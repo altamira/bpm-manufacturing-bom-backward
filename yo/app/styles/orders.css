@@ -1,0 +1,45 @@
+/* order list page */
+.orders-list{
+	height:100%;
+}
+
+/* order operation bar */
+.order-operation{
+	height:40px;
+}
+
+/* order operation bar */
+.order-operation-box{
+	height:100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+}
+
+/* back to previous page sign */
+.back-sign{
+	width: 10%;
+	height:100%;
+	border-right: 1px solid black;
+	float:left;
+	
+}
+
+/* order label */
+.order-label{
+	width: 20%;
+	height:100%;
+	border-right: 1px solid black;
+	float:left;
+	text-align:center;
+}
+
+/* order search bar */
+.order-search{
+	height:30px;
+}
+
+/* order search bar */
+.product-display{
+ 
+}

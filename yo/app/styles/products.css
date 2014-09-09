@@ -1,0 +1,45 @@
+/* product list page */
+.products-list{
+	height:100%;
+}
+
+/* product operation bar */
+.product-operation{
+	height:40px;
+}
+
+/* product operation bar */
+.product-operation-box{
+	height:100%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 1px solid black;
+}
+
+/* back to previous page sign */
+.back-sign{
+	width: 10%;
+	height:100%;
+	border-right: 1px solid black;
+	float:left;
+	
+}
+
+/* product label */
+.product-label{
+	width: 20%;
+	height:100%;
+	border-right: 1px solid black;
+	float:left;
+	text-align:center;
+}
+
+/* product search bar */
+.product-search{
+	height:30px;
+}
+
+/* product search bar */
+.product-display{
+ 
+}
