@@ -22,8 +22,8 @@ var yoApp = angular.module('yoApp', [
 yoApp.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+         templateUrl: 'views/orders.html',
+        controller: 'OrderListCtrl'
       })
       .when('/about', {
         templateUrl: 'views/about.html',
