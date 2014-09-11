@@ -1,17 +1,34 @@
-<div class="orders-list">
-	<div class="order-operation">
-		<div class="order-operation-box">
-			<div class="back-sign" align="center">
-				<a href back-button ><img src="images/back.jpg" alt="back" height=30 width=40/></a><br>
-			</div>
-			<div class="order-label">
-				<p style="margin-top:10px">Orders</p>
+<!--<div class="padding-order-body">
+	<div class="right-inner-addon ">
+		<i class="fa fa-search"></i>
+		<input type="search"
+		class="form-control  app-search" 
+		placeholder="Find For Orders" />
+	</div>
+	<div class="scrollable">
+		<div class="scrollable-content">
+			<div class="list-group">
+				<a ng-repeat="item in scrollItems" href="#" class="list-group-item">
+				{{ item }} <i class="fa fa-times pull-right"></i>
+
+				</a>
 			</div>
 		</div>
 	</div>
-	<div class="order-search">
-	</div>
-	<div class="order-display">
-		
-	</div>	
-</div>
+</div>	-->
+	
+<input type="search" ng-model="global.search" class="form-control app-search" placeholder="Find For Orders" />
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="list-group">
+      <a ng-repeat="item in scrollItems |  filter: global.search" href="#" class="list-group-item">
+        {{ item }} <i class="fa fa-times pull-right"></i>
+      </a>
+    </div>
+  </div>
+</div>		
+	
+
+
+

@@ -1,7 +1,6 @@
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -76,4 +75,35 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+.nav-background-color{
+	background-color: #1BA1E2;
+	color: #FFFFFF;
+}
+.nav-font-color{
+	color: #FFFFFF!important;
+}
+.btn-separator:after {
+    content: ' ';
+    display: block;
+    float: left;
+    background: #DDD;
+    margin: 0px;
+    min-height: 50px;
+    width: 1px;
+}
+.btn-icon-txt-transform{
+	text-transform:none;
+}
+.background-white{
+	background-color: #FFFFFF;
+}
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+.padding-order-body{
+	 padding-top: 10px;
 }

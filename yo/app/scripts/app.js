@@ -10,6 +10,7 @@
  */
 var yoApp = angular.module('yoApp', [
     'ngAnimate',
+	'ngTable',
     'ngCookies',
     'ngResource',
     'ngRoute',
